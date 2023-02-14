@@ -6,10 +6,10 @@
   "author": "Isaac Amankwaah Anane",
   "license": "MIT",
   "scripts": {
-    "build:dev": "tsc --project './tsconfig.json'",
+    "build:dev": "npx tsc --project './tsconfig.json'",
     "start:dev": "cross-env tsc --project './tsconfig.json' --watch & NODE_ENV=development nodemon -r esm ./dist",
     "start": "cross-env tsc --project './tsconfig.json' --watch & NODE_ENV=production node -r esm ./dist",
-    "test": "tsc --project './tsconfig.json' && cross-env UBER_CLONE_NODE_ENV=test  nyc --reporter=lcov --reporter=text --reporter=text-summary mocha -c -r esm '{,!(node_modules)/**}dist/**/*.test.js' --timeout 12000 --exit",
+    "test": "npx tsc --project './tsconfig.json' && cross-env UBER_CLONE_NODE_ENV=test  nyc --reporter=lcov --reporter=text --reporter=text-summary mocha -c -r esm '{,!(node_modules)/**}dist/**/*.test.js' --timeout 12000 --exit",
     "lint": "./node_modules/.bin/tslint -c tslint.json 'src/**/**.ts'"
   },
   "dependencies": {
