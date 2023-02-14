@@ -1,0 +1,13 @@
+node_modules/
+.env
+.nyc_output
+dist/
+logs/
+.vscode
+coverage
+.DS_Store
+.history
+data
+*.rdb
+tmp
+.idea
